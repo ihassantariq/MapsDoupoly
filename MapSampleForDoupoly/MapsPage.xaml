@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    Title="Maps"
+    x:Class="MapSampleForDoupoly.MapsPage">
+    
+    <ContentPage.Content>
+        
+        <Grid>
+             <maps:Map x:Name="map" ItemsSource="{Binding Histories}" IsShowingUser="True"  MoveToLastRegionOnLayoutChange="True" >
+                 <maps:Map.ItemTemplate>
+                    <DataTemplate >
+                        <maps:Pin Position="{Binding Position}" Type="Place" Label="Current Location"  Address="{Binding Address}"  >
+                        </maps:Pin>
+                    </DataTemplate>
+                </maps:Map.ItemTemplate>
+             </maps:Map>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>
