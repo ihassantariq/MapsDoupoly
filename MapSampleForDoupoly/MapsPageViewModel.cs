@@ -12,6 +12,7 @@ namespace MapSampleForDoupoly
 {
     public class MapsPageViewModel:INotifyPropertyChanged
     {
+        #region Getter Setters 
         public event PropertyChangedEventHandler PropertyChanged;
         private Location _currentLocation = null;
         public MapsPage CurrentPage = null; 
@@ -31,10 +32,7 @@ namespace MapSampleForDoupoly
             }
         }
 
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        #endregion
 
 
         public MapsPageViewModel()
@@ -42,6 +40,12 @@ namespace MapSampleForDoupoly
             GetLocationPeriodically();
         }
 
+        #region Helper functions
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         void GetLocationPeriodically()
         {
             Device.StartTimer(new TimeSpan(0, 0, 10), () =>
@@ -76,6 +80,7 @@ namespace MapSampleForDoupoly
                             if (_currentLocation == null)
                             {
                                 _currentLocation = location;
+                                //setting location first time
                                 SetupCurrentLocation();
                             }
                             else
@@ -84,6 +89,7 @@ namespace MapSampleForDoupoly
                                 if (distance >= 20)
                                 {
                                     CurrentPage?.DisplayAlert("Move Alert", $"You have moved {(int)distance} meters from your previous position", "Ok");
+                                    //setting up location after as current one
                                     SetupCurrentLocation();
                                 }
                             }
@@ -113,7 +119,6 @@ namespace MapSampleForDoupoly
         double CheckDistanceBetweenTwoLocations(Location current, Location previous)
         {
             Distance distance = Distance.BetweenPositions(new Position(current.Latitude, current.Longitude), new Position(previous.Latitude, previous.Longitude));
-            Console.WriteLine($"User moved in miles: {distance.Meters}");
             return distance.Meters;
         }
 
@@ -134,9 +139,13 @@ namespace MapSampleForDoupoly
         }
     }
 
+    #endregion
+
+    //Simple class to bind with Maps properties 
     public class History
     {
         public Position Position { get; set; }
-        public String Address { get; set; }
+        public string Address { get; set; }
     }
+
 }

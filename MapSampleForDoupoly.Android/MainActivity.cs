@@ -19,6 +19,7 @@ namespace MapSampleForDoupoly.Droid
                 Manifest.Permission.AccessCoarseLocation,
                 Manifest.Permission.AccessFineLocation
          };
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -56,7 +57,6 @@ namespace MapSampleForDoupoly.Droid
                 else
                 {
                     //Location permission granted
-
                     
                 }
             }
@@ -71,9 +71,9 @@ namespace MapSampleForDoupoly.Droid
             {
                 if ((grantResults.Length == 1) && (grantResults[0] == (int)Permission.Granted)) { }
 
-                // Permissions granted - display a message.
+                // Permissions granted
                 else { }
-                // Permissions denied - display a message.
+                // Permissions denied
             }
             else
             {

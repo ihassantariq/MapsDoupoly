@@ -9,10 +9,11 @@
     <ContentPage.Content>
         
         <Grid>
-             <maps:Map x:Name="map" ItemsSource="{Binding Histories}" IsShowingUser="True"  MoveToLastRegionOnLayoutChange="True" >
+            <!--Maps control -->
+             <maps:Map x:Name="map" ItemsSource="{Binding Histories}" IsShowingUser="True"  MoveToLastRegionOnLayoutChange="True" > 
                  <maps:Map.ItemTemplate>
                     <DataTemplate >
-                        <maps:Pin Position="{Binding Position}" Type="Place" Label="Current Location"  Address="{Binding Address}"  >
+                        <maps:Pin Position="{Binding Position}" Type="Place" Label="Current Location"  Address="{Binding Address}"  > <!--Keep in mind that here is actual items binding happening -->
                         </maps:Pin>
                     </DataTemplate>
                 </maps:Map.ItemTemplate>
