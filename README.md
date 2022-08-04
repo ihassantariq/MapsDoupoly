@@ -14,12 +14,17 @@ It takes 10 seconds after giving permission to show the current location and sho
 
 ## Code you copied or referenced from Stackoverflow, MSDN, other developer blogs, etc
 
-https://github.com/xamarin/xamarin-forms-samples/blob/main/WorkingWithMaps/WorkingWithMaps/WorkingWithMaps/PinPage.xaml
-https://docs.microsoft.com/en-us/xamarin/essentials/geocoding?context=xamarin%2Fandroid&tabs=android
-https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.Device.StartTimer?view=xamarin-forms
-https://docs.microsoft.com/en-us/xamarin/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm
-https://www.youtube.com/watch?v=rgOwa7TQvIU
-https://docs.microsoft.com/en-us/answers/questions/205619/xamarin-forms-how-to-bind-the-position-value-of-xa.html
+1. https://github.com/xamarin/xamarin-forms-samples/blob/main/WorkingWithMaps/WorkingWithMaps/WorkingWithMaps/PinPage.xaml
+
+2. https://docs.microsoft.com/en-us/xamarin/essentials/geocoding?context=xamarin%2Fandroid&tabs=android
+
+3. https://docs.microsoft.com/en-us/dotnet/api/Xamarin.Forms.Device.StartTimer?view=xamarin-forms
+
+4. https://docs.microsoft.com/en-us/xamarin/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm
+
+5. https://www.youtube.com/watch?v=rgOwa7TQvIU
+
+6. https://docs.microsoft.com/en-us/answers/questions/205619/xamarin-forms-how-to-bind-the-position-value-of-xa.html
 
 
 ## Hours spent on app
